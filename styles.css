@@ -4,8 +4,43 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 50px;
 }
 
+a{
+    text-decoration: none;
+}
+
+/* Esta regla solo se agrega si es seguro que no habrá más listas de elementos dentro de la página para estilizar */
+/* ul{
+    list-style: none;
+} */
+
+/* 1ra sección */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    color:rgb(24, 24, 24);
+    font-weight: 600;
+    font-style: bold;
+    font-size: 35px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li{
+    margin: 0 10px;
+}
+
+.navbar ul li a{
+    color:rgb(24, 24, 24);
+    text-decoration: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
