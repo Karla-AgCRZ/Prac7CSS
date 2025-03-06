@@ -72,10 +72,11 @@ a{
 }
 
 /* 3ra sección | Comprendiendo el uso de Grid*/
+/* Si se quiere que las imágenes se acomoden uniformemente es necesario que grid-template-rows sea (auto) para que el espaciado no sea tan grande si se utiliza junto con display: flex */
 .layout{
     display: grid;
     grid-template-columns: 200px, 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto;
     grid-template-areas:
     "header header"
     "sidebar main"
@@ -98,10 +99,16 @@ a{
     padding: 20px;
 }
 
+/* Recordar que es posible agregar un display: flex a un grid-area con display: grid */
+/* Los gaps van en el elemento padre */
 .main{
     grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
     background-color: rgb(78, 78, 78);
-    padding: 20px;
+    padding: 10px;
 }
 
 .footer{
@@ -111,4 +118,13 @@ a{
     text-align: center;
 }
 
+/* Clase container correspondiente al gird-area main */
+/* flex: 1 1 150px se adapta al espacio disponible */
+.container{
+    flex: 1 1 150px;
+    max-width: 200px;
+    height: 200px;
+    background-color: rgb(213, 212, 212);
+    text-align: center;
 
+}
