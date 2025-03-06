@@ -51,6 +51,7 @@ a{
 .gallery{
     display: grid;
     /* Si se aumentan los píxeles de la regla minmax y se disminuyen las filas (fr) las imágenes son más grandes */
+    /* repeat específica que esa regla se repita en cada colummna de la tabla */
     grid-template-columns: repeat(auto-fit, minmax(260px, 2fr));
     gap: 40px;
     padding: 15px;
@@ -70,9 +71,37 @@ a{
     margin-top: 90px;
 }
 
-/* 3ra sección */
+/* 3ra sección | Comprendiendo el uso de Grid*/
+.layout{
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer"
+    ;
+    height: 100vh;
+    color: white;
+}
 
+.header{
+    grid-area: header;
+    background-color: rgb(52, 51, 51) ;
+}
 
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(65, 64, 64);
+}
 
+.main{
+    grid-area: main;
+    background-color: rgb(78, 78, 78)
+}
 
+.footer{
+    grid-area: footer;
+    background-color: rgb(100, 100, 100);
+}
 
