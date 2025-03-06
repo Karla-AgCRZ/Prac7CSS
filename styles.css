@@ -1,0 +1,11 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 50px;
+}
+
