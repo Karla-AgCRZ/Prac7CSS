@@ -100,7 +100,7 @@ a{
 }
 
 /* Recordar que es posible agregar un display: flex a un grid-area con display: grid */
-/* Los gaps van en el elemento padre */
+/* Los gaps van en el elemento padre, así como el overflow-y: scroll para evitar que los elementos se desborden */
 .main{
     grid-area: main;
     display: flex;
@@ -109,6 +109,13 @@ a{
     gap:15px;
     background-color: rgb(78, 78, 78);
     padding: 10px;
+    overflow-y: scroll;
+}
+
+/* Es necesario especificar un clase para las imágenes que estén dentro del grid */
+.main img{
+    max-width: 200px;
+    height: 200px;
 }
 
 .footer{
@@ -126,5 +133,26 @@ a{
     height: 200px;
     background-color: rgb(213, 212, 212);
     text-align: center;
+}
 
+/* 4ta sección */
+.dashboard{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Regla Media Queries | Añadiendo breakpoints para pantallas grandes*/
+@media screen and (min-width:768px){
+    .dashboard{
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+.card{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 9px rgba(5, 5, 5, 0.286);
 }
