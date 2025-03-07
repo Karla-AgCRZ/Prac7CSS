@@ -72,7 +72,7 @@ a{
 }
 
 /* 3ra sección | Comprendiendo el uso de Grid*/
-/* Si se quiere que las imágenes se acomoden uniformemente es necesario que grid-template-rows sea (auto) para que el espaciado no sea tan grande si se utiliza junto con display: flex */
+/* Si se busca que las imágenes se acomoden uniformemente es necesario que grid-template-rows sea (auto) para que el espaciado no sea tan grande si se utiliza junto con display: flex */
 .layout{
     display: grid;
     grid-template-columns: 200px, 1fr;
@@ -97,6 +97,7 @@ a{
     grid-area: sidebar;
     background-color: rgb(65, 64, 64);
     padding: 20px;
+    position: static;
 }
 
 /* Recordar que es posible agregar un display: flex a un grid-area con display: grid */
@@ -116,6 +117,14 @@ a{
 .main img{
     max-width: 200px;
     height: 200px;
+}
+
+.main iframe{
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(228, 228, 228, 0.87);
 }
 
 .footer{
